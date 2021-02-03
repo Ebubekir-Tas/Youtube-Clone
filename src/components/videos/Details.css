@@ -1,0 +1,24 @@
+.video-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.video-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.video-channel-name,
+.video-metadata {
+  color: #555;
+}
+
+.video-channel-name {
+  text-decoration: none;
+  transition: color 150ms;
+}

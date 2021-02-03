@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body > #root > div {
+  overflow: hidden;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  width: auto;
+}
+
+.body-container {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  height: calc(100vh - 104px);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.videos {
+  display: column;
+  width: 100vw;
+}
+
+.youtube-container {
+  background-color: #fff;
+  height: 100%;
+}
