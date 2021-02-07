@@ -25,7 +25,6 @@ const Details = (props) => {
         return weeks + " weeks";
       default:
         return weeks + " weeks";
-      // code block
     }
   }
 
