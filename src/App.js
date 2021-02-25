@@ -65,7 +65,7 @@ export default function App() {
     console.log(body);
     return body.items.filter((item) => item.type === "video");
   }
-  const [query, setQuery] = React.useState("Search - This is Functional!");
+  const [query, setQuery] = React.useState("");
   const [list, setList] = React.useState(null);
   const search = (e) => {
     e.preventDefault();
