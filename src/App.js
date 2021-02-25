@@ -8,8 +8,6 @@ import SideBar from "./components/sidebar/SideBar";
 
 const YOUTUBE_API_KEY =`${process.env.REACT_APP_YOUTUBE_API_KEY}`
 
-console.log(process.env)
-
 const thumbnails = [
   {
     id: 1
