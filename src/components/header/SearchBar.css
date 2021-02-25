@@ -16,6 +16,10 @@
   margin-left: auto;
 }
 
+.search-input::placeholder {
+  opacity: 0.75
+}
+
 .search-btn {
   display: flex;
   align-items: center;

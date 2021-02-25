@@ -9,7 +9,7 @@ export default function SearchBar(props) {
         <input
           className="search-input"
           type="search"
-          placeholder="Functional Search"
+          placeholder="Search with API"
           autoFocus
           onChange={(e) => props.setQuery(e.target.value)}
         />

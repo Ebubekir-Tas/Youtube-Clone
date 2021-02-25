@@ -6,6 +6,10 @@ import Row from "./components/videos/Row";
 import SearchResults from "./components/videos/SearchResults";
 import SideBar from "./components/sidebar/SideBar";
 
+const YOUTUBE_API_KEY =`${process.env.REACT_APP_YOUTUBE_API_KEY}`
+
+console.log(process.env)
+
 const thumbnails = [
   {
     id: 1
@@ -55,7 +59,7 @@ export default function App() {
         method: "GET",
         headers: {
           "x-rapidapi-host": "youtube-search-results.p.rapidapi.com",
-          "x-rapidapi-key": "34f7a567e7mshf2841c764f11de2p1d7b2djsna0a64bafca5d"
+          "x-rapidapi-key": YOUTUBE_API_KEY
         }
       }
     );
