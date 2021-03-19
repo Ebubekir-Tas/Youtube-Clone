@@ -39,7 +39,7 @@ export default function SearchResults(props) {
 
                     <div class="video-metadata">
                       <span>
-                        {item.views
+                        {item.views && item.views
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       </span>
