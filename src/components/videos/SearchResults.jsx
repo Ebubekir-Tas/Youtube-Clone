@@ -44,7 +44,7 @@ export default function SearchResults(props) {
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                           : '999 views'}
                       </span>
-                      // Live videos that don't return views data default 999 views.
+                      /* Live videos that don't return views data default 999 views. */
                       {" views "}• <span>{item.uploaded_at}</span>
                     </div>
                   </div>
