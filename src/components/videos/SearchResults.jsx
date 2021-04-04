@@ -9,7 +9,7 @@ export default function SearchResults(props) {
           <p>No results</p>
         ) : (
           <div className="results-wrapper">
-            <div class="video-section">
+            <div className="video-section">
               <h2 className="video-section-title">Search Results</h2>
               {props.list.map((item) => (
                 <article className="video-container">
@@ -29,15 +29,15 @@ export default function SearchResults(props) {
                     />
                   </a>
 
-                  <div class="video-details">
-                    <a href={url} class="video-title">
+                  <div className="video-details">
+                    <a href={url} className="video-title">
                       {item.title}
                     </a>
-                    <a href={url} class="video-channel-name">
+                    <a href={url} className="video-channel-name">
                       {item.author.name}
                     </a>
 
-                    <div class="video-metadata">
+                    <div className="video-metadata">
                       <span>
                         {item.views ? item.views
                           .toString()
