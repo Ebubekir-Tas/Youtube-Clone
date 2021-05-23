@@ -17,8 +17,8 @@ export const VideosStore = createSlice ({
 
 export const { 
     getVideos
-} = VideoStore.actions;
+} = VideosStore.actions;
 
-export const VideoStore = state => state.videos
+export const videosStore = state => state.videos
 
-export default VideoStore.reducer
+export default VideosStore.reducer
