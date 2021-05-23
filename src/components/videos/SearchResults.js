@@ -1,17 +1,17 @@
 import React from "react";
 
-export default function SearchResults(props) {
+export default function SearchResults({ list }) {
   let url = "#";
   return (
     <section className="search-results">
-      {props.list &&
-        (props.list.length === 0 ? (
+      {list &&
+        (list.length === 0 ? (
           <p>No results</p>
         ) : (
           <div className="results-wrapper">
             <div className="video-section">
               <h2 className="video-section-title">Search Results</h2>
-              {props.list.map((item) => (
+              {list.map((item) => (
                 <article className="video-container">
                   <a
                     href={item.link}

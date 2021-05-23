@@ -4,15 +4,15 @@ import SearchBar from "./SearchBar";
 import YoutubeLogo from "./YoutubeLogo";
 import MenuIcons from "./MenuIcons";
 
-export default function Header(props) {
+export default function Header({ search, list, setQuery, searchYoutube }) {
   return (
     <header className="header">
       <YoutubeLogo />
       <SearchBar
-        search={props.search}
-        list={props.list}
-        setQuery={props.setQuery}
-        searchYouTube={props.searchYouTube}
+        search={search}
+        list={list}
+        setQuery={setQuery}
+        searchYouTube={searchYouTube}
       />
       <MenuIcons />
     </header>

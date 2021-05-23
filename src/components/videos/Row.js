@@ -1,12 +1,12 @@
 import React from "react";
 import "./Row.css";
 
-export default function Row(props) {
+export default function Row({ title, card }) {
   return (
     <section className="video-section">
-      {props.title && <h2 className="video-section-title">{props.title}</h2>}
+      {title && <h2 className="video-section-title">{title}</h2>}
       {/*Render if there is title prop*/}
-      {props.card}
+      {card}
     </section>
   );
 }

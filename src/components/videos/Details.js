@@ -1,7 +1,7 @@
 import React from "react";
 import "./Details.css";
 
-const Details = (props) => {
+const Details = () => {
   let url = "#";
 
   let numOfViews = Math.floor(Math.random() * 300000)

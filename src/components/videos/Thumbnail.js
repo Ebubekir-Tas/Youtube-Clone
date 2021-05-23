@@ -1,7 +1,7 @@
 import React from "react";
 import "./Thumbnail.css";
 
-const Thumbnail = (props) => {
+const Thumbnail = ({ imageURL }) => {
   let url = "#";
   let randomTime1 = Math.floor(Math.random() * 58) + 1;
   let randomTime2 = Math.floor(Math.random() * 58) + 1;
@@ -17,7 +17,7 @@ const Thumbnail = (props) => {
           : randomTime1.toString() + ":" + randomTime2.toString()
       }
     >
-      <img className="thumbnail-image" src={props.imageURL} alt={url} />
+      <img className="thumbnail-image" src={imageURL} alt={url} />
     </a>
   );
 };
