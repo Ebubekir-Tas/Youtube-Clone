@@ -16,7 +16,7 @@ const Routes = [
   },
 ];
 
-export default function Routes1() {
+export default function MainRouter() {
   return (
     <Router>
       <Switch>

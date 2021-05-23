@@ -12,6 +12,5 @@ const rootElement = document.getElementById("root");
         <App />
       </BrowserRouter>
     </Provider>,
-
     rootElement
 );
