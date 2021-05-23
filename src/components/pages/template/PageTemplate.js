@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import Header from "../../header/Header";
 import SideBar from '../../sidebar/SideBar';
+import { useDispatch } from 'react-redux';
+import { getVideos } from '../../../redux/VideosStore'
 
 const YOUTUBE_API_KEY =`${process.env.REACT_APP_YOUTUBE_API_KEY}`
 
 export default function PageTemplate(Page) {
   return function NewPage() {
+
+    const dispatch = useDispatch();
+
     async function searchYouTube(q) {
       q = encodeURIComponent(q);
       const response = await fetch(
@@ -25,14 +30,16 @@ export default function PageTemplate(Page) {
     const [list, setList] = useState(null);
     const search = (e) => {
       e.preventDefault();
-      searchYouTube(query).then(setList);
+      searchYouTube(query).then((val) => dispatch(getVideos(val))); 
     };
-console.log(list)
+
+// console.log(list)
+
     return (
       <div className="youtube-container">
             <Header
                 search={search}
-                list={list}
+                // list={list}
                 query={query}
                 setQuery={setQuery}
                 searchYouTube={searchYouTube}

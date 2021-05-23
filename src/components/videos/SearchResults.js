@@ -1,17 +1,22 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 
-export default function SearchResults({ list }) {
+export default function SearchResults() {
+
+  const videosList = useSelector((state) => state.videos)
+
   let url = "#";
+  console.log(videosList)
   return (
     <section className="search-results">
-      {list &&
-        (list.length === 0 ? (
+      {videosList &&
+        (videosList.videos.length === 0 ? (
           <p>No results</p>
         ) : (
           <div className="results-wrapper">
             <div className="video-section">
               <h2 className="video-section-title">Search Results</h2>
-              {list.map((item) => (
+              {videosList.videos.map((item) => (
                 <article className="video-container">
                   <a
                     href={item.link}

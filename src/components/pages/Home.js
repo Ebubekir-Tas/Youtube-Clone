@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SearchResults from '../videos/SearchResults';
 import Row from '../videos/Row';
 import Card from '../videos/Card';
-import Header from '../header/Header';
-import SideBar from '../sidebar/SideBar';
 import './Home.css'
-
-const YOUTUBE_API_KEY =`${process.env.REACT_APP_YOUTUBE_API_KEY}`
 
 const thumbnails = [
     {
@@ -47,15 +43,14 @@ const thumbnails = [
   };
 
 export default function HomePage(){
+
     return (
     <div className="youtube-container">
       <div className="body-container">
 
 
         <div className="videos">
-          <SearchResults
-            list={list}
-          />
+          <SearchResults />
 
 
           <Row card={thumbnails.map(firstRow)} title={"Trending"} />
@@ -63,7 +58,6 @@ export default function HomePage(){
           {/* All Videos in first Row */}
 
           <Row
-            setList={setList}
             title={"Recommended Videos"}
             card={thumbnails.map(secondRow)}
           />
