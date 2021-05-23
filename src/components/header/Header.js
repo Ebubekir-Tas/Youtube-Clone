@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 import YoutubeLogo from "./YoutubeLogo";
 import MenuIcons from "./MenuIcons";
 
-export default function Header({ search, list, setQuery, searchYoutube }) {
+export default function Header({ search, list, setQuery, searchYouTube }) {
   return (
     <header className="header">
       <YoutubeLogo />
