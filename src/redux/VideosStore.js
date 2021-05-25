@@ -3,13 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 export const VideosStore = createSlice ({
     name: 'videos',
     initialState: {
-        videos: []
+        videos: [],
+        retrievedVideos: false
     },
     reducers: {
         getVideos: (state, action) => {
             return {
                 ...state,
-                videos: action.payload
+                videos: action.payload,
+                retrievedVideos: true
             }
     }
     }

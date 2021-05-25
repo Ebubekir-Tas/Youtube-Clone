@@ -33,13 +33,10 @@ export default function PageTemplate(Page) {
       searchYouTube(query).then((val) => dispatch(getVideos(val))); 
     };
 
-// console.log(list)
-
     return (
       <div className="youtube-container">
             <Header
                 search={search}
-                // list={list}
                 query={query}
                 setQuery={setQuery}
                 searchYouTube={searchYouTube}

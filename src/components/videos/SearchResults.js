@@ -3,20 +3,19 @@ import { useSelector } from 'react-redux';
 
 export default function SearchResults() {
 
-  const videosList = useSelector((state) => state.videos)
+  const { videos, retrievedVideos }= useSelector((state) => state.videos)
 
   let url = "#";
-  console.log(videosList)
   return (
     <section className="search-results">
-      {videosList &&
-        (videosList.videos.length === 0 ? (
+      {/* If there are no results from search and a search has been made, return "No results" */}
+      {(videos.length === 0 && retrievedVideos ? (
           <p>No results</p>
-        ) : (
+        ) : retrievedVideos && (
           <div className="results-wrapper">
             <div className="video-section">
               <h2 className="video-section-title">Search Results</h2>
-              {videosList.videos.map((item) => (
+              {videos.map((item) => (
                 <article className="video-container">
                   <a
                     href={item.link}
