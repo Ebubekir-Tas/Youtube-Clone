@@ -1,27 +1,12 @@
 import React from 'react';
 import SearchResults from '../videos/SearchResults';
-import Row from '../videos/Row';
+import VideoRowTemplate from '../videos/VideoRowTemplate';
 import Card from '../videos/Card';
-import './Home.css'
+import VideoRow from './components/VideoRow';
+import './Home.css';
 
 const thumbnails = [1, 2, 3, 4, 5, 6];
-
-  const FirstRow = ({pic}) => {
-    return (
-      <Card
-        imageURL={pic}
-        //random profile image URL
-      />
-    );
-  };
-  
-  const SecondRow = ({pic}) => {
-    return (
-      <Card
-        imageURL={pic}
-      />
-    );
-  };
+//number of sample videos to be rendered
 
 export default function HomePage(){
 
@@ -29,25 +14,24 @@ export default function HomePage(){
     <div className="youtube-container">
       <div className="body-container">
 
-
         <div className="videos">
           <SearchResults />
 
-
-          <Row 
+          <VideoRowTemplate
           title={"Trending"}
-          card={thumbnails.map((x) => <FirstRow key={x} pic={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()+x)}/>)}  />
+          card={thumbnails.map((x) =>{ return <VideoRow key={x} imageURL={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()*10)}/>})}  />
           <br></br>
           {/* All Videos in first Row */}
 
-          <Row
+          <VideoRowTemplate
             title={"Recommended Videos"}
-            card={thumbnails.map((x) => <SecondRow key={x} pic={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()+x)} />)}
+            card={thumbnails.map((x) =>{ return <VideoRow key={x} imageURL={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()*10)} />})}
+
           />
           <br></br>
           {/* All Videos in second Row */}
 
-          <Row
+          <VideoRowTemplate
             title={"Random Video"}
             card={<Card imageURL={"https://source.unsplash.com/user/erondu"} />}
           />

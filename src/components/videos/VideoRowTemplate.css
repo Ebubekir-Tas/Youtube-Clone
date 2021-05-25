@@ -1,0 +1,16 @@
+.video-section-title {
+  grid-column: 1 / -1;
+  margin: -0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem 1rem;
+  padding: 3rem 1.5rem;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
