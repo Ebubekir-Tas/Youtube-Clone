@@ -5,14 +5,14 @@ import {
   Switch
 } from 'react-router-dom';
 import PageTemplate from '../pages/template/PageTemplate';
-import Home from '../pages/Home';
+import { HomePage } from '../pages/Home';
 
 const Routes = [
   {
     key : 'home-Page',
     path : '/',
     exact : true,
-    component: PageTemplate(Home)
+    component: PageTemplate(HomePage)
   },
 ];
 

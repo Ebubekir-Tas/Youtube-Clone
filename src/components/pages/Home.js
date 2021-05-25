@@ -8,9 +8,8 @@ import './Home.css';
 const thumbnails = [1, 2, 3, 4, 5, 6];
 //number of sample videos to be rendered
 
-export default function HomePage(){
-
-    return (
+export const HomePage = React.memo(function HomePage() {
+  return (
     <div className="youtube-container">
       <div className="body-container">
 
@@ -40,5 +39,4 @@ export default function HomePage(){
       </div>
      </div>
     )
-}
-
+});
