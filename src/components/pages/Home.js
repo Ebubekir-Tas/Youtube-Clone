@@ -4,40 +4,21 @@ import Row from '../videos/Row';
 import Card from '../videos/Card';
 import './Home.css'
 
-const thumbnails = [
-    {
-      key: 1
-    },
-    {
-      key: 2
-    },
-    {
-      key: 3
-    },
-    {
-      key: 4
-    },
-    {
-      key: 5
-    }
-  ];
+const thumbnails = [1, 2, 3, 4, 5, 6];
 
-  const firstRow = (thumbnails) => {
-    const newSig = thumbnails.id + 0;
+  const FirstRow = ({pic}) => {
     return (
       <Card
-        imageURL={"https://picsum.photos/200/300?random=" + newSig}
-        key={thumbnails.id}
+        imageURL={pic}
+        //random profile image URL
       />
     );
   };
   
-  const secondRow = (thumbnails) => {
-    const newSig = thumbnails.id + 5;
+  const SecondRow = ({pic}) => {
     return (
       <Card
-        imageURL={"https://picsum.photos/200/300?random=" + newSig}
-        key={thumbnails.id}
+        imageURL={pic}
       />
     );
   };
@@ -53,13 +34,15 @@ export default function HomePage(){
           <SearchResults />
 
 
-          <Row card={thumbnails.map(firstRow)} title={"Trending"} />
+          <Row 
+          title={"Trending"}
+          card={thumbnails.map((x) => <FirstRow key={x} pic={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()+x)}/>)}  />
           <br></br>
           {/* All Videos in first Row */}
 
           <Row
             title={"Recommended Videos"}
-            card={thumbnails.map(secondRow)}
+            card={thumbnails.map((x) => <SecondRow key={x} pic={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()+x)} />)}
           />
           <br></br>
           {/* All Videos in second Row */}
