@@ -16,7 +16,7 @@ export default function SearchResults() {
             <div className="video-section">
               <h2 className="video-section-title">Search Results</h2>
               {videos.map((item) => (
-                <article className="video-container">
+                <article className="video-container" key={item.id}>
                   <a
                     href={item.link}
                     rel="noopener noreferrer"
