@@ -10,11 +10,9 @@ const SideBar = () => {
       <SideBarRow path='/trending' Icon={Whatshot} title="Trending" />
       <SideBarRow path='/subscriptions' Icon={Subscriptions} title="Subscriptions" />
       <hr className="break-line" />
-      <SideBarRow path='/library' Icon={VideoLibrary} title="Library" />
       <SideBarRow path='/history' Icon={History} title="History" />
-      <SideBarRow path='/your-videos' Icon={OndemandVideo} title="Your videos" />
       <SideBarRow path='/watch-later' Icon={WatchLater} title="Watch later" />
-      <SideBarRow path='/liked-videos' Icon={ThumbUp} title="Liked videos" />
+      <SideBarRow path='/likes' Icon={ThumbUp} title="Liked videos" />
       <hr className="break-line" />
     </aside>
   );

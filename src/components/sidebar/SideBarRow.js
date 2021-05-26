@@ -8,6 +8,7 @@ const SideBarRow = ({ Icon, title, path }) => {
   return (
     <Link to={ path } style={{ textDecoration: 'none', color: 'inherit' }}>
     <div className={`sidebarRow ${currentPath === path ? 'selected' : ''}`}>
+      {/* Panel bolds correspondingly to the route you're in */}
       <Icon className="sidebarRow-icon" />
       <h2 className="sidebarRow-title">{title}</h2>
     </div>

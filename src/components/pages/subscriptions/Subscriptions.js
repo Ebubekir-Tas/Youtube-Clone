@@ -1,10 +1,10 @@
 import React from 'react';
-import './LikedVideosPage'
+import './Subscriptions'
 
-export default function LikedVideos(){
+export default function Subscriptions(){
     return (
         <section className="video-section">
-            <div>Liked Videos:</div>
+            <div>Subscriptions:</div>
         </section>
     )
 }
