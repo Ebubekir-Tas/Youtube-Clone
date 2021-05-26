@@ -1,63 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from 'react-redux';
+import YouTube from 'react-youtube';
 
 export default function SearchResults() {
 
-  const { videos, retrievedVideos }= useSelector((state) => state.videos)
+  const { videos, retrievedVideos } = useSelector((state) => state.videos)
+  const [videoUrl, setVideoUrl] = useState(null);
 
-  let url = "#";
   return (
     <section className="search-results">
       {/* If there are no results from search and a search has been made, return "No results" */}
       {(videos.length === 0 && retrievedVideos ? (
-          <p>No results</p>
-        ) : retrievedVideos && (
-          <div className="results-wrapper">
-            <div className="video-section">
-              <h2 className="video-section-title">Search Results</h2>
-              {videos.map((item) => (
-                <article className="video-container" key={item.id}>
+        <p>No results</p>
+      ) : retrievedVideos && (
+        <div className="results-wrapper">
+          <div className="video-section">
+            {videoUrl && <YouTube
+              videoId={videoUrl}
+            />
+            }
+            <h2 className="video-section-title">Search Results</h2>
+            {videos.map((item) => (
+              <article className="video-container" key={item.id}>
+                <a
+                  onClick={() => setVideoUrl(item.id)}
+                  rel="noopener noreferrer"
+                  className="thumbnail"
+                  style={{ cursor: 'pointer' }}
+                  data-duration={item.duration}
+                >
+                  <img
+                    onClick={() => setVideoUrl(item.id)}
+                    className="thumbnail-image"
+                    src={item.thumbnail}
+                    alt={"Video Thumbnail"}
+                  />
+                </a>
+
+                <div className="video-details">
                   <a
-                    href={item.link}
-                    rel="noopener noreferrer"
-                    target={"_blank"}
-                    className="thumbnail"
-                    data-duration={item.duration}
+                    className="video-title"
                   >
-                    <img
-                      className="thumbnail-image"
-                      href={item.link}
-                      target="_blank"
-                      src={item.thumbnail}
-                      alt={url}
-                    />
+                    {item.title}
+                  </a>
+                  <a
+                    className="video-channel-name"
+                  >
+                    {item.author.name}
                   </a>
 
-                  <div className="video-details">
-                    <a href={url} className="video-title">
-                      {item.title}
-                    </a>
-                    <a href={url} className="video-channel-name">
-                      {item.author.name}
-                    </a>
-
-                    <div className="video-metadata">
-                      <span>
-                        {item.views ? item.views
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                          : '999 views'}
-                      </span>
-                      {/* Live videos that don't return views data default 999 views. */}
-                      {" views "}• <span>{item.uploaded_at}</span>
-                    </div>
+                  <div className="video-metadata">
+                    <span>
+                      {item.views ? item.views
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                        : '999 views'}
+                    </span>
+                    {/* Live videos that don't return views data default 999 views. */}
+                    {" views "}• <span>{item.uploaded_at}</span>
                   </div>
-                </article>
-              ))}
-            </div>
-            <br></br>
+                </div>
+              </article>
+            ))}
           </div>
-        ))}
+          <br></br>
+        </div>
+      ))}
     </section>
   );
 }
