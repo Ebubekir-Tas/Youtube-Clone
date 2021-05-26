@@ -5,7 +5,7 @@
 .sidebar {
   top: 0;
   flex-direction: row;
-  width: 250px;
+  width: 200px;
   position: sticky;
   z-index: 1;
 }

@@ -15,7 +15,7 @@ const SideBar = () => {
     <aside className="sidebar">
       <SideBarRow selected Icon={HomeIcon} title="Home" />
       <SideBarRow Icon={WhatshotIcon} title="Trending" />
-      <SideBarRow Icon={SubscriptionsIcon} title="Subscription" />
+      <SideBarRow Icon={SubscriptionsIcon} title="Subscriptions" />
       <hr className="break-line" />
       <SideBarRow Icon={VideoLibraryIcon} title="Library" />
       <SideBarRow Icon={HistoryIcon} title="History" />
