@@ -2,7 +2,6 @@ import React from "react";
 import "./SideBar.css";
 import SideBarRow from "./SideBarRow";
 import { Home, Whatshot, Subscriptions, VideoLibrary, History, OndemandVideo, WatchLater, ThumbUp } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   return (
