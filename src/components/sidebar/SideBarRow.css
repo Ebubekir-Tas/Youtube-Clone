@@ -27,17 +27,17 @@
   color: red;
 }
 
-.sidebarrow:hover > .sidebarrow_title {
+.sidebarRow:hover > .sidebarrow_title {
   font-weight: bold;
 }
 
-.sidebarRowIcon {
+.sidebarRow-icon {
   color: #606060;
   width: 1.75rem;
   height: 1.75rem;
 }
 
-.sidebarRowTitle {
+.sidebarRow-title {
   flex: 1;
   margin-left: 20px;
   font-size: 1.5rem;
@@ -47,7 +47,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .sidebarrow {
+  .sidebarRow {
     width: 100%;
   }
 }
