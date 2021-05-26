@@ -3,9 +3,9 @@ import "./SideBarRow.css";
 
 const SideBarRow = ({ selected, Icon, title }) => {
   return (
-    <div className={`sidebarrow ${selected ? "selected" : ""}`}>
-      <Icon className="sidebarrow__icon" />
-      <h2 className="sidebarrow__title">{title}</h2>
+    <div className={`sidebarRow ${selected ? "selected" : ""}`}>
+      <Icon className="sidebarRow-icon" />
+      <h2 className="sidebarRow-title">{title}</h2>
     </div>
   );
 };
