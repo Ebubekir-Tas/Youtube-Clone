@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchResults from '../videos/SearchResults';
-import VideoRowTemplate from '../videos/VideoRowTemplate';
-import Card from '../videos/Card';
-import VideoRow from './components/VideoRow';
+import SearchResults from '../../videos/SearchResults';
+import VideoRowTemplate from '../../videos/VideoRowTemplate';
+import Card from '../../videos/Card';
+import VideoRow from './../components/VideoRow';
 import './Home.css';
 
 const thumbnails = [1, 2, 3, 4, 5, 6];

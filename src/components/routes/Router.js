@@ -5,14 +5,21 @@ import {
   Switch
 } from 'react-router-dom';
 import PageTemplate from '../pages/template/PageTemplate';
-import { HomePage } from '../pages/Home';
+import { HomePage } from '../pages/home-page/Home';
+import LikedVideos from '../pages/liked-videos/LikedVideosPage';
 
 const Routes = [
   {
-    key : 'home-Page',
+    key : 'home-page',
     path : '/',
     exact : true,
     component: PageTemplate(HomePage)
+  },
+  {
+    key : 'likes-page',
+    path : '/liked-videos',
+    exact : true,
+    component: PageTemplate(LikedVideos)
   },
 ];
 
