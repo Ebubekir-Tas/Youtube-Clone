@@ -26,3 +26,12 @@
   background-color: #aaa;
   overflow: hidden;
 }
+
+@media only screen and (max-width: 900px) {
+  .thumbnail {
+    width: 75%
+  }
+  .thumbnail-image {
+    height: 150px;
+  }
+}
