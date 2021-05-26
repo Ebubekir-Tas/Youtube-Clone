@@ -7,21 +7,15 @@ import { Link } from 'react-router-dom';
 const SideBar = () => {
   return (
     <aside className="sidebar">
-      <Link to={{ pathname: '/' }}>
-        <SideBarRow selected Icon={Home} title="Home" />
-      </Link>
-
-      <SideBarRow Icon={Whatshot} title="Trending" />
-      <SideBarRow Icon={Subscriptions} title="Subscription" />
+      <SideBarRow path='/' selected Icon={Home} title="Home" />
+      <SideBarRow path='/trending' Icon={Whatshot} title="Trending" />
+      <SideBarRow path='/subscriptions' Icon={Subscriptions} title="Subscriptions" />
       <hr className="break-line" />
-      <SideBarRow Icon={VideoLibrary} title="Library" />
-      <SideBarRow Icon={History} title="History" />
-      <SideBarRow Icon={OndemandVideo} title="Your videos" />
-      <SideBarRow Icon={WatchLater} title="Watch later" />
-      
-      <Link to={{ pathname: '/liked-videos' }}>
-        <SideBarRow Icon={ThumbUp} title="Liked videos" />
-      </Link>
+      <SideBarRow path='/library' Icon={VideoLibrary} title="Library" />
+      <SideBarRow path='/history' Icon={History} title="History" />
+      <SideBarRow path='/your-videos' Icon={OndemandVideo} title="Your videos" />
+      <SideBarRow path='/watch-later' Icon={WatchLater} title="Watch later" />
+      <SideBarRow path='/liked-videos' Icon={ThumbUp} title="Liked videos" />
       <hr className="break-line" />
     </aside>
   );
