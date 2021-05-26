@@ -6,7 +6,7 @@ import { Home, Whatshot, Subscriptions, VideoLibrary, History, OndemandVideo, Wa
 const SideBar = () => {
   return (
     <aside className="sidebar">
-      <SideBarRow path='/' selected Icon={Home} title="Home" />
+      <SideBarRow path='/' Icon={Home} title="Home" />
       <SideBarRow path='/trending' Icon={Whatshot} title="Trending" />
       <SideBarRow path='/subscriptions' Icon={Subscriptions} title="Subscriptions" />
       <hr className="break-line" />
