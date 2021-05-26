@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import YouTube from 'react-youtube';
+import './SearchResults.css'
 
 export default function SearchResults() {
 
@@ -17,6 +18,7 @@ export default function SearchResults() {
           <div className="video-section">
             {videoUrl && <YouTube
               videoId={videoUrl}
+              className="youtube-iframe"
             />
             }
             <h2 className="video-section-title">Search Results</h2>
