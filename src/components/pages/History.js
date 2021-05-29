@@ -1,10 +1,10 @@
 import React from 'react';
-import './Trending'
+import './styles.css';
 
-export default function TrendingVideos(){
+export default function History(){
     return (
         <section className="video-section">
-            <div>Trending Videos:</div>
+            <div>Watch History:</div>
         </section>
     )
 }

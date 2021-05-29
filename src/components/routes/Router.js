@@ -4,13 +4,13 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import PageTemplate from '../pages/template/PageTemplate';
-import { HomePage } from '../pages/home/Home';
-import LikedVideos from '../pages/liked-videos/LikedVideos';
-import Trending from '../pages/trending/Trending';
-import Subscriptions from '../pages/subscriptions/Subscriptions';
-import History from '../pages/history/History';
-import WatchLater from '../pages/watch-later/WatchLater';
+import PageTemplate from '../pages/PageTemplate';
+import { HomePage } from '../pages/Home';
+import LikedVideos from '../pages/LikedVideos';
+import Trending from '../pages/Trending';
+import Subscriptions from '../pages/Subscriptions';
+import History from '../pages/History';
+import WatchLater from '../pages/WatchLater';
 
 const Routes = [
   {

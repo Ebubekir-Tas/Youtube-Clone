@@ -1,5 +1,5 @@
 import React from 'react';
-import './LikedVideos'
+import './styles.css';
 
 export default function LikedVideos(){
     return (

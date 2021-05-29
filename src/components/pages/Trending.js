@@ -1,10 +1,10 @@
 import React from 'react';
-import './WatchLater'
+import './styles.css';
 
-export default function Watchlater(){
+export default function TrendingVideos(){
     return (
         <section className="video-section">
-            <div>Watch Later:</div>
+            <div>Trending Videos:</div>
         </section>
     )
 }

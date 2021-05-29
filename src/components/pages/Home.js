@@ -1,9 +1,9 @@
 import React from 'react';
-import SearchResults from '../../videos/SearchResults';
-import VideoRowTemplate from '../../videos/VideoRowTemplate';
-import Card from '../../videos/Card';
-import VideoRow from './../components/VideoRow';
-import './Home.css';
+import SearchResults from '../videos/SearchResults';
+import VideoRowTemplate from '../videos/VideoRowTemplate';
+import Card from '../videos/Card';
+import VideoRow from './components/VideoRow';
+import './Home';
 
 const thumbnails = [1, 2, 3, 4, 5, 6];
 //number of sample videos to be rendered

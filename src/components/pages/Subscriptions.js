@@ -1,5 +1,5 @@
 import React from 'react';
-import './Subscriptions'
+import './styles.css';
 
 export default function Subscriptions(){
     return (

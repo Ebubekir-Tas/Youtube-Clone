@@ -1,10 +1,10 @@
 import React from 'react';
-import './History'
+import './styles.css';
 
-export default function History(){
+export default function Watchlater(){
     return (
         <section className="video-section">
-            <div>Watch History:</div>
+            <div>Watch Later:</div>
         </section>
     )
 }

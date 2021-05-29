@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from "../../header/Header";
-import SideBar from '../../sidebar/SideBar';
+import Header from "../header/Header";
+import SideBar from '../sidebar/SideBar';
 import { useDispatch } from 'react-redux';
-import { getVideos } from '../../../redux/VideosStore'
+import { getVideos } from '../../redux/VideosStore'
 
 const YOUTUBE_API_KEY =`${process.env.REACT_APP_YOUTUBE_API_KEY}`
 
