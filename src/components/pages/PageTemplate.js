@@ -27,7 +27,7 @@ export default function PageTemplate(Page) {
       return body.items.filter((item) => item.type === "video");
     }
     const [query, setQuery] = useState("");
-    const [list, setList] = useState(null);
+
     const search = (e) => {
       e.preventDefault();
       searchYouTube(query).then((val) => dispatch(getVideos(val))); 

@@ -1,24 +1,32 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const VideosStore = createSlice ({
+export const VideosStore = createSlice({
     name: 'videos',
     initialState: {
-        videos: [],
-        retrievedVideos: false
+        // Search results
+        searchedVideos: [],
+        retrievedVideos: false,
+        // Liked Videos
+        likedVideos: []
     },
     reducers: {
-        getVideos: (state, action) => {
-            return {
-                ...state,
-                videos: action.payload,
-                retrievedVideos: true
-            }
-    }
+        getVideos: (state, action) => ({
+            ...state,
+            searchedVideos: action.payload,
+            retrievedVideos: true
+        }),
+        LikeVideo: (state, action) => {
+            // Disallows duplicate liked videos
+            if (!state.likedVideos.includes(action.payload)) return {
+            ...state,
+            likedVideos: [...state.likedVideos, action.payload]
+        }}
     }
 });
 
-export const { 
-    getVideos
+export const {
+    getVideos,
+    LikeVideo
 } = VideosStore.actions;
 
 export const videosStore = state => state.videos

@@ -1,28 +1,44 @@
 import React, { useState } from "react";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { LikeVideo } from '../../redux/VideosStore';
+import { ThumbUp } from '@material-ui/icons';
+import { IconButton, Typography, Box } from '@material-ui/core';
 import YouTube from 'react-youtube';
 import './SearchResults.css'
 
 export default function SearchResults() {
 
-  const { videos, retrievedVideos } = useSelector((state) => state.videos)
+  const { searchedVideos, retrievedVideos } = useSelector((state) => state.videos)
+  const { likedVideos } = useSelector((state) => state.videos);
   const [videoUrl, setVideoUrl] = useState(null);
-
+  const dispatch = useDispatch();
+  console.log(likedVideos);
   return (
     <section className="search-results">
       {/* If there are no results from search and a search has been made, return "No results" */}
-      {(videos.length === 0 && retrievedVideos ? (
+      {(searchedVideos.length === 0 && retrievedVideos ? (
         <p>No results</p>
       ) : retrievedVideos && (
         <div className="results-wrapper">
           <div className="video-section">
-            {videoUrl && <YouTube
+            {videoUrl && <div><YouTube
               videoId={videoUrl}
               className="youtube-iframe"
             />
+              <Box
+              className="like-button"
+              onClick={() => dispatch(LikeVideo(videoUrl))}>
+                <IconButton >
+                  <ThumbUp className="thumbUp-icon" />
+                </IconButton>
+                <Typography>
+                  {likedVideos.includes(videoUrl) ? "Unlike Video" : 'Like Video'}
+                </Typography>
+              </Box>
+            </div>
             }
             <h2 className="video-section-title">Search Results</h2>
-            {videos.map((item) => (
+            {searchedVideos.map((item) => (
               <article className="video-container" key={item.id}>
                 <a
                   onClick={() => setVideoUrl(item.id)}
