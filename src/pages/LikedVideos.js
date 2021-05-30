@@ -7,13 +7,12 @@ export function LikedVideos() {
     const { likedVideos } = useSelector((state) => state.videos)
 
     return (
-        <section className="video-section">
-            <div>Liked Videos:
-                {likedVideos && likedVideos.map((val, i) => <YouTube
+        <div className="video-section">
+            Liked Videos:
+            {likedVideos && likedVideos.map((val, i) => <YouTube
                 videoId={likedVideos[i]}
                 className="youtube-iframe"
             />)}
-            </div>
-        </section>
+        </div>
     )
 }

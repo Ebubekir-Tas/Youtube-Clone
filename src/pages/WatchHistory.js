@@ -3,8 +3,8 @@ import './styles.css';
 
 export function WatchHistory() {
     return (
-        <section className="video-section">
-            <div>Watch History:</div>
-        </section>
+        <div className="video-section">
+            Watch History:
+        </div>
     )
 }

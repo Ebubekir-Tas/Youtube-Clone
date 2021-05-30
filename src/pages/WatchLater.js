@@ -3,8 +3,8 @@ import './styles.css';
 
 export function WatchLater() {
     return (
-        <section className="video-section">
-            <div>Watch Later:</div>
-        </section>
+        <div className="video-section">
+            Watch Later:
+        </div>
     )
 }
