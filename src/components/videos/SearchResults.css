@@ -1,4 +1,10 @@
 .like-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.unlike-button {
     color: blue;
     display: flex;
     background-color: 'blue';
@@ -6,7 +12,7 @@
     cursor: pointer;
 }
 
-.thumbUp-icon {
+.thumbUp-icon-liked {
     color: blue;
 }
 

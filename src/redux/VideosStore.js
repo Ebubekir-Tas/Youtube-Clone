@@ -18,9 +18,16 @@ export const VideosStore = createSlice({
         LikeVideo: (state, action) => {
             // Disallows duplicate liked videos
             if (!state.likedVideos.includes(action.payload)) return {
-            ...state,
-            likedVideos: [...state.likedVideos, action.payload]
-        }}
+                ...state,
+                likedVideos: [...state.likedVideos, action.payload]
+            }
+
+            // "Unlike" video
+            return {
+                ...state,
+                likedVideos: state.likedVideos.filter(video => video !== action.payload),
+            }
+        }
     }
 });
 

@@ -25,16 +25,32 @@ export default function SearchResults() {
               videoId={videoUrl}
               className="youtube-iframe"
             />
+            {likedVideos.includes(videoUrl) ?
               <Box
-              className="like-button"
-              onClick={() => dispatch(LikeVideo(videoUrl))}>
+                className="unlike-button"
+                onClick={() => dispatch(LikeVideo(videoUrl))}>
                 <IconButton >
-                  <ThumbUp className="thumbUp-icon" />
+                  <ThumbUp className="thumbUp-icon-liked" />
                 </IconButton>
-                <Typography>
-                  {likedVideos.includes(videoUrl) ? "Unlike Video" : 'Like Video'}
+                
+                  <Typography>
+                    Unlike Video
                 </Typography>
-              </Box>
+                </Box>
+                  :
+                  <Box
+                  className="like-button"
+                  onClick={() => dispatch(LikeVideo(videoUrl))}>
+                  <IconButton >
+                    <ThumbUp className="thumbUp-icon-unliked" />
+                  </IconButton>
+                  
+                    <Typography>
+                      Like Video
+                  </Typography>
+                  </Box>
+                }
+              
             </div>
             }
             <h2 className="video-section-title">Search Results</h2>
