@@ -1,8 +1,10 @@
 import React from 'react';
-import SearchResults from '../videos/SearchResults';
-import VideoRowTemplate from '../videos/VideoRowTemplate';
-import Card from '../videos/Card';
-import VideoRow from './components/VideoRow';
+import {
+  SearchResults,
+  VideoRowTemplate,
+  Card,
+  VideoRow
+} from '@components';
 import './Home';
 
 const thumbnails = [1, 2, 3, 4, 5, 6];
@@ -17,14 +19,14 @@ export const HomePage = React.memo(function HomePage() {
           <SearchResults />
 
           <VideoRowTemplate
-          title={"Trending"}
-          card={thumbnails.map((x) =>{ return <VideoRow key={x} imageURL={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()*10)}/>})}  />
+            title={"Trending"}
+            card={thumbnails.map((x) => { return <VideoRow key={x} imageURL={"https://picsum.photos/200/300?random=" + Math.floor(Math.random() * 10)} /> })} />
           <br></br>
           {/* All Videos in first Row */}
 
           <VideoRowTemplate
             title={"Recommended Videos"}
-            card={thumbnails.map((x) =>{ return <VideoRow key={x} imageURL={"https://picsum.photos/200/300?random=" + Math.floor(Math.random()*10)} />})}
+            card={thumbnails.map((x) => { return <VideoRow key={x} imageURL={"https://picsum.photos/200/300?random=" + Math.floor(Math.random() * 10)} /> })}
 
           />
           <br></br>
@@ -37,6 +39,6 @@ export const HomePage = React.memo(function HomePage() {
           {/* Third Row */}
         </div>
       </div>
-     </div>
-    )
+    </div>
+  )
 });

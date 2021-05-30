@@ -1,7 +1,7 @@
 import React from "react";
 import "./MenuIcons.css";
 
-export default function MenuIcons() {
+export function MenuIcons() {
   let url = "#";
   return (
     <div className="menu-icons">

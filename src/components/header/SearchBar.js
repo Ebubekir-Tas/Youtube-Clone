@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-export default function SearchBar( {search, setQuery }) {
+export function SearchBar({ search, setQuery }) {
   return (
     <div>
       <form className="search-bar" onSubmit={search}>

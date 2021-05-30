@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-export default function Watchlater(){
+export function WatchLater() {
     return (
         <section className="video-section">
             <div>Watch Later:</div>

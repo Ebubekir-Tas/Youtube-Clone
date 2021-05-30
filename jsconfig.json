@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "*": [
+        "./*"
+      ],
+      "@components": [
+        "./src/components/index.js"
+      ],
+      "@pages": [
+        "./src/pages/index.js"
+      ],
+      "@redux": [
+        "./src/redux/index.js"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}

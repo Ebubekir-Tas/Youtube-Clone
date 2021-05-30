@@ -1,7 +1,7 @@
 import React from "react";
 import "./YoutubeLogo.css";
 
-export default function YoutubeLogo() {
+export function YoutubeLogo() {
   let url = "#";
   return (
     <a href={url}>

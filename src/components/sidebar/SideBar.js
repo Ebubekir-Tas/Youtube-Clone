@@ -1,9 +1,16 @@
 import React from "react";
 import "./SideBar.css";
-import SideBarRow from "./SideBarRow";
-import { Home, Whatshot, Subscriptions, VideoLibrary, History, OndemandVideo, WatchLater, ThumbUp } from '@material-ui/icons';
+import { SideBarRow } from "./SideBarRow";
+import {
+  Home,
+  Whatshot,
+  Subscriptions,
+  History,
+  WatchLater,
+  ThumbUp
+} from '@material-ui/icons';
 
-const SideBar = () => {
+export function SideBar() {
   return (
     <aside className="sidebar">
       <SideBarRow path='/' Icon={Home} title="Home" />
@@ -17,5 +24,3 @@ const SideBar = () => {
     </aside>
   );
 };
-
-export default SideBar;

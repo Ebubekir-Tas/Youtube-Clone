@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
-import MainRouter from './components/routes/Router';
+import { BaseRouter } from '@components';
 
 export default function App() {
   return (
-    <MainRouter />
+    <BaseRouter />
   );
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import "./Details.css";
 
-const Details = () => {
-  let url = "#";
+const Details = React.memo(() => {
 
   let numOfViews = Math.floor(Math.random() * 300000)
     .toString()
@@ -30,10 +29,10 @@ const Details = () => {
 
   return (
     <div className="video-details">
-      <a href={url} className="video-title">
+      <a href="" className="video-title">
         Video Title
       </a>
-      <a href={url} className="video-channel-name">
+      <a href="" className="video-channel-name">
         Channel Name
       </a>
       <div className="video-metadata">
@@ -41,6 +40,6 @@ const Details = () => {
       </div>
     </div>
   );
-};
+});
 
-export default React.memo(Details);
+export { Details }

@@ -6,7 +6,7 @@ import { IconButton, Typography, Box } from '@material-ui/core';
 import YouTube from 'react-youtube';
 import './SearchResults.css'
 
-export default function SearchResults() {
+export function SearchResults() {
 
   const { searchedVideos, retrievedVideos } = useSelector((state) => state.videos)
   const { likedVideos } = useSelector((state) => state.videos);
@@ -25,32 +25,32 @@ export default function SearchResults() {
               videoId={videoUrl}
               className="youtube-iframe"
             />
-            {likedVideos.includes(videoUrl) ?
-              <Box
-                className="unlike-button"
-                onClick={() => dispatch(LikeVideo(videoUrl))}>
-                <IconButton >
-                  <ThumbUp className="thumbUp-icon-liked" />
-                </IconButton>
-                
+              {likedVideos.includes(videoUrl) ?
+                <Box
+                  className="unlike-button"
+                  onClick={() => dispatch(LikeVideo(videoUrl))}>
+                  <IconButton >
+                    <ThumbUp className="thumbUp-icon-liked" />
+                  </IconButton>
+
                   <Typography>
                     Unlike Video
                 </Typography>
                 </Box>
-                  :
-                  <Box
+                :
+                <Box
                   className="like-button"
                   onClick={() => dispatch(LikeVideo(videoUrl))}>
                   <IconButton >
                     <ThumbUp className="thumbUp-icon-unliked" />
                   </IconButton>
-                  
-                    <Typography>
-                      Like Video
+
+                  <Typography>
+                    Like Video
                   </Typography>
-                  </Box>
-                }
-              
+                </Box>
+              }
+
             </div>
             }
             <h2 className="video-section-title">Search Results</h2>

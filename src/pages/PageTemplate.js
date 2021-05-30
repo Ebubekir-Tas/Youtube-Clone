@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import Header from "../header/Header";
-import SideBar from '../sidebar/SideBar';
+import { Header, SideBar } from '@components';
 import { useDispatch } from 'react-redux';
-import { getVideos } from '../../redux/VideosStore'
+import { getVideos } from '@redux'
 
-const YOUTUBE_API_KEY =`${process.env.REACT_APP_YOUTUBE_API_KEY}`
+const YOUTUBE_API_KEY = `${process.env.REACT_APP_YOUTUBE_API_KEY}`
 
-export default function PageTemplate(Page) {
+export function PageTemplate(Page) {
   return function NewPage() {
 
     const dispatch = useDispatch();
@@ -30,24 +29,24 @@ export default function PageTemplate(Page) {
 
     const search = (e) => {
       e.preventDefault();
-      searchYouTube(query).then((val) => dispatch(getVideos(val))); 
+      searchYouTube(query).then((val) => dispatch(getVideos(val)));
     };
 
     return (
       <div className="youtube-container">
-            <Header
-                search={search}
-                query={query}
-                setQuery={setQuery}
-                searchYouTube={searchYouTube}
-            />
-            <div className="body-container">
-            <SideBar />
-            <div className="videos">
-                <Page />
-            </div>
-            </div>
+        <Header
+          search={search}
+          query={query}
+          setQuery={setQuery}
+          searchYouTube={searchYouTube}
+        />
+        <div className="body-container">
+          <SideBar />
+          <div className="videos">
+            <Page />
+          </div>
         </div>
+      </div>
     );
   };
 }

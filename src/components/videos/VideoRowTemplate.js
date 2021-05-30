@@ -1,7 +1,7 @@
 import React from "react";
 import "./VideoRowTemplate.css";
 
-export default function VideoRowTemplate({ title, card }) {
+export function VideoRowTemplate({ title, card }) {
   return (
     <section className="video-section">
       {title && <h2 className="video-section-title">{title}</h2>}

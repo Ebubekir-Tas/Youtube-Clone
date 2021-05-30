@@ -1,7 +1,7 @@
 import React from 'react';
-import Card from '../../videos/Card';
+import { Card } from '@components';
 
-export default function VideoRow({imageURL}) {
+export function VideoRow({ imageURL }) {
     return (
         <Card
             imageURL={imageURL}

@@ -3,10 +3,8 @@ import YouTube from 'react-youtube';
 import { useSelector } from 'react-redux';
 import './styles.css';
 
-export default function LikedVideos() {
+export function LikedVideos() {
     const { likedVideos } = useSelector((state) => state.videos)
-
-    console.log(likedVideos)
 
     return (
         <section className="video-section">
