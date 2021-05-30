@@ -5,5 +5,8 @@
     padding: 3rem 1.5rem;
     justify-content: center;
     background-color: #f9f9f9;
-  }
-  
+}
+
+.liked-video-text {
+  padding-bottom: 2rem;
+}
