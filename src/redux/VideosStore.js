@@ -7,7 +7,9 @@ export const VideosStore = createSlice({
     searchedVideos: [],
     retrievedVideos: false,
     // Liked Videos
-    likedVideos: []
+    likedVideos: [],
+    // Channels subscribed to
+    channelSubscriptions: []
   },
   reducers: {
     getVideos: (state, action) => ({
@@ -26,6 +28,13 @@ export const VideosStore = createSlice({
       return {
         ...state,
         likedVideos: state.likedVideos.filter(video => video !== action.payload),
+      }
+    },
+    subscribeToChannel: (state, action) => {
+      // Subscribe and unsubscribe to channel
+      if (!state.subscribeToChannel.includes(action.payload)) return {
+        ...state,
+        channelSubscriptions: [...state.channelSubscriptions, action.payload]
       }
     }
   }

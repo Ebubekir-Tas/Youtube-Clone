@@ -9,7 +9,7 @@ export function SearchResults() {
   const { searchedVideos, retrievedVideos } = useSelector((state) => state.videos)
   const { likedVideos } = useSelector((state) => state.videos);
   const [videoUrl, setVideoUrl] = useState(null);
-  console.log(likedVideos);
+
   return (
     <section className="search-results">
       {/* If there are no results from search and a search has been made, return "No results" */}

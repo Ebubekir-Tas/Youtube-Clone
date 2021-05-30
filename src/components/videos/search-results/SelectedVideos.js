@@ -1,45 +1,32 @@
 import React from 'react';
-import { LikeVideo } from '@redux';
-import { useDispatch } from 'react-redux';
-import { ThumbUp } from '@material-ui/icons';
-import { IconButton, Typography, Box } from '@material-ui/core';
 import YouTube from 'react-youtube';
+import { ToggleLike } from './ToggleLike';
 import './SearchResults.css';
 
 export function SelectedVideos({ videoUrl, likedVideos }) {
-  const dispatch = useDispatch();
   return (
     <div>
       <YouTube
         videoId={videoUrl}
         className="youtube-iframe"
       />
+
+      {/* If the video is liked */}
       {likedVideos.includes(videoUrl) ?
-        <Box
-          className="unlike-button"
-          onClick={() => dispatch(LikeVideo(videoUrl))}>
-          <IconButton >
-            <ThumbUp className="thumbUp-icon-liked" />
-          </IconButton>
-
-          <Typography>
-            Unlike Video
-          </Typography>
-        </Box>
+        <ToggleLike
+          buttonStyle="unlike-button"
+          iconStyle="thumbUp-icon-liked"
+          likeToggleText="Unlike Video"
+          videoUrl={videoUrl}
+        />
         :
-        <Box
-          className="like-button"
-          onClick={() => dispatch(LikeVideo(videoUrl))}>
-          <IconButton >
-            <ThumbUp className="thumbUp-icon-unliked" />
-          </IconButton>
-
-          <Typography>
-            Like Video
-          </Typography>
-        </Box>
+        <ToggleLike
+          buttonStyle="like-button"
+          iconStyle="thumbUp-icon-unliked"
+          likeToggleText="like Video"
+          videoUrl={videoUrl}
+        />
       }
-
     </div>
   )
 }
