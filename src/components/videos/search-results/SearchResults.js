@@ -6,9 +6,10 @@ import './SearchResults.css';
 
 export function SearchResults() {
 
-  const { searchedVideos, retrievedVideos } = useSelector((state) => state.videos)
+  const { searchedVideos, retrievedVideos } = useSelector((state) => state.videos);
   const { likedVideos } = useSelector((state) => state.videos);
   const [videoUrl, setVideoUrl] = useState(null);
+  const [videoAuthor, setVideoAuthor] = useState({})
 
   return (
     <section className="search-results">
@@ -23,6 +24,7 @@ export function SearchResults() {
             {videoUrl &&
               <SelectedVideos
                 videoUrl={videoUrl}
+                videoAuthor={videoAuthor}
                 likedVideos={likedVideos} />
             }
             <h2 className="video-section-title">Search Results</h2>
@@ -30,6 +32,7 @@ export function SearchResults() {
               <VideoCards
                 item={item}
                 setVideoUrl={setVideoUrl}
+                setVideoAuthor={setVideoAuthor}
               />
             ))}
           </div>

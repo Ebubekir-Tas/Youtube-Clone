@@ -1,17 +1,17 @@
 import React from 'react';
 
-export function VideoCards({ item, setVideoUrl }) {
+export function VideoCards({ item, setVideoUrl, setVideoAuthor }) {
+  console.log(item)
   return (
     <article className="video-container" key={item.id}>
       <a
-        onClick={() => setVideoUrl(item.id)}
+        onClick={() => {setVideoUrl(item.id); setVideoAuthor(item.author)}}
         rel="noopener noreferrer"
         className="thumbnail"
         style={{ cursor: 'pointer' }}
         data-duration={item.duration}
       >
         <img
-          onClick={() => setVideoUrl(item.id)}
           className="thumbnail-image"
           src={item.thumbnail}
           alt={"Video Thumbnail"}

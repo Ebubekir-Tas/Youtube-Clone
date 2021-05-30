@@ -30,9 +30,10 @@ export const VideosStore = createSlice({
         likedVideos: state.likedVideos.filter(video => video !== action.payload),
       }
     },
-    subscribeToChannel: (state, action) => {
+    SubscribeChannel: (state, action) => {
       // Subscribe and unsubscribe to channel
-      if (!state.subscribeToChannel.includes(action.payload)) return {
+      // if (!state.SubscribeChannel.includes(action.payload)) 
+      return {
         ...state,
         channelSubscriptions: [...state.channelSubscriptions, action.payload]
       }
@@ -42,7 +43,8 @@ export const VideosStore = createSlice({
 
 export const {
   getVideos,
-  LikeVideo
+  LikeVideo,
+  SubscribeChannel
 } = VideosStore.actions;
 
 export const videosStore = state => state.videos

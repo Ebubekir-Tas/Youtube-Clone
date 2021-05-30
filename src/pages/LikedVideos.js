@@ -12,11 +12,12 @@ export function LikedVideos() {
       <div>
         <Typography className="liked-video-text">
           Liked Videos:
-                </Typography>
-        {likedVideos && likedVideos.map((val, i) => <YouTube
-          videoId={likedVideos[i]}
-          className="youtube-iframe"
-        />)}
+        </Typography>
+        {likedVideos && likedVideos.map((val, i) =>
+          <YouTube
+            videoId={likedVideos[i]}
+            className="youtube-iframe"
+          />)}
       </div>
     </div>
   )

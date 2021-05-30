@@ -1,9 +1,10 @@
 import React from 'react';
 import YouTube from 'react-youtube';
 import { ToggleLike } from './ToggleLike';
+import { SubscribeToChannel } from './SubscribeToChannel';
 import './SearchResults.css';
 
-export function SelectedVideos({ videoUrl, likedVideos }) {
+export function SelectedVideos({ videoUrl, videoAuthor, likedVideos }) {
   return (
     <div>
       <YouTube
@@ -27,6 +28,11 @@ export function SelectedVideos({ videoUrl, likedVideos }) {
           videoUrl={videoUrl}
         />
       }
+
+      {/* If channel is already subscribed to */}
+      <SubscribeToChannel 
+        videoAuthor={videoAuthor}
+      />
     </div>
   )
 }
