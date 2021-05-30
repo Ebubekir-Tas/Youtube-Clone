@@ -1,2 +1,3 @@
 export * from './SearchResults';
-export * from './ReturnedVideos';
+export * from './SelectedVideos';
+export * from './VideoCards';

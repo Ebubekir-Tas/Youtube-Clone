@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from 'react-redux';
-import { ReturnedVideos } from './ReturnedVideos';
+import { SelectedVideos } from './SelectedVideos';
 import { VideoCards } from './VideoCards';
 import './SearchResults.css';
 
@@ -19,9 +19,9 @@ export function SearchResults() {
 
         <div className="results-wrapper">
           <div className="video-section">
-            {/* Videos returned from search */}
+            {/* Video selected from search */}
             {videoUrl &&
-              <ReturnedVideos
+              <SelectedVideos
                 videoUrl={videoUrl}
                 likedVideos={likedVideos} />
             }

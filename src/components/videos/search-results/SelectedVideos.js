@@ -6,7 +6,7 @@ import { IconButton, Typography, Box } from '@material-ui/core';
 import YouTube from 'react-youtube';
 import './SearchResults.css';
 
-export function ReturnedVideos({ videoUrl, likedVideos }) {
+export function SelectedVideos({ videoUrl, likedVideos }) {
   const dispatch = useDispatch();
   return (
     <div>
@@ -24,7 +24,7 @@ export function ReturnedVideos({ videoUrl, likedVideos }) {
 
           <Typography>
             Unlike Video
-                </Typography>
+          </Typography>
         </Box>
         :
         <Box
@@ -36,7 +36,7 @@ export function ReturnedVideos({ videoUrl, likedVideos }) {
 
           <Typography>
             Like Video
-                  </Typography>
+          </Typography>
         </Box>
       }
 
