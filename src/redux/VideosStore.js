@@ -31,11 +31,18 @@ export const VideosStore = createSlice({
       }
     },
     SubscribeChannel: (state, action) => {
-      // Subscribe and unsubscribe to channel
-      // if (!state.SubscribeChannel.includes(action.payload)) 
+
+      // Subscribe if not subscribed
+      const isSubscribed = (e) => e.name === action.payload.name
+      if (!state.channelSubscriptions.some(isSubscribed))
+        return {
+          ...state,
+          channelSubscriptions: [...state.channelSubscriptions, action.payload]
+        }
+
+      // If already subscribed, don't add subscription
       return {
-        ...state,
-        channelSubscriptions: [...state.channelSubscriptions, action.payload]
+        ...state
       }
     }
   }

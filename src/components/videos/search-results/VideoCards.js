@@ -1,7 +1,6 @@
 import React from 'react';
 
 export function VideoCards({ item, setVideoUrl, setVideoAuthor }) {
-  console.log(item)
   return (
     <article className="video-container" key={item.id}>
       <a
