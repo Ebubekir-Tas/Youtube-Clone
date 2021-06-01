@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Paper } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-import './styles.css';
+import { pageStyles } from '@styles';
 
 export function Subscriptions() {
   const { channelSubscriptions } = useSelector((state) => state.videos);
@@ -11,20 +11,20 @@ export function Subscriptions() {
   const ownerBadge = channelSubscriptions.map(e => e.ownerBadges);
   const avatar = channelSubscriptions.map(e => e.bestAvatar);
 
+  const classes = pageStyles();
   return (
-    <div className="subscriptions">
-      <Typography className="liked-video-text">
+    <div className={classes.pageInnerContent}>
+      <Typography>
         Subscribed To:
-        </Typography>
+      </Typography>
 
-      {name.map((val, i) => (
-        <Paper className="subscription-list">
+      {name.map((val, i) => 
+        <Paper className={classes.subscriptionList}>
           <div>{name[i]}</div>
           <div>{ref[i]}</div>
           <div>{ownerBadge[i]}</div>
           <img src={avatar[i].url} />
         </Paper>
-      )
       )}
     </div>
   )

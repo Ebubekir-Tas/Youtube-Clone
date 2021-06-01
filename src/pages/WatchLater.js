@@ -1,9 +1,10 @@
 import React from 'react';
-import './styles.css';
+import { pageStyles } from '@styles';
 
 export function WatchLater() {
+  const classes = pageStyles();
   return (
-    <div className="video-section">
+    <div className={classes.pageInnerContent}>
       Watch Later:
     </div>
   )

@@ -5,17 +5,18 @@ import {
   Card,
   VideoRow
 } from '@components';
-import './Home';
+import { pageStyles } from '@styles';
 
 const thumbnails = [1, 2, 3, 4, 5, 6];
 //number of sample videos to be rendered
 
 export const HomePage = React.memo(function HomePage() {
+  const classes = pageStyles();
   return (
-    <div className="youtube-container">
-      <div className="body-container">
+    <div className={classes.youtubeContainer}>
+      <div className={classes.bodyContainer}>
 
-        <div className="videos">
+        <div className={classes.videos}>
           <SearchResults />
 
           <VideoRowTemplate

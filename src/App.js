@@ -1,9 +1,13 @@
 import React from "react";
-import "./styles.css";
+import { ThemeProvider } from '@material-ui/core';
+import { theme } from '@styles';
 import { BaseRouter } from '@components';
+import "./styles.css";
 
 export default function App() {
   return (
-    <BaseRouter />
+    <ThemeProvider theme={theme}>
+      <BaseRouter />
+    </ThemeProvider>
   );
 }

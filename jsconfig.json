@@ -16,6 +16,9 @@
       ],
       "@redux": [
         "./src/redux/index.js"
+      ],
+      "@styles": [
+        "./src/styles/index.js"
       ]
     }
   },

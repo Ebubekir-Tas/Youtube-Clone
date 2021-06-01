@@ -15,15 +15,6 @@ body {
   width: auto;
 }
 
-.body-container {
-  display: flex;
-  justify-content: space-between;
-  float: left;
-  height: calc(100vh - 104px);
-  width: 100vw;
-  overflow-x: hidden;
-}
-
 .videos, .page-content {
   display: column;
   width: 100vw;
