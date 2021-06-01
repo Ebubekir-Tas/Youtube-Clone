@@ -14,3 +14,22 @@ body {
   margin: 0;
   width: auto;
 }
+
+.body-container {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  height: calc(100vh - 104px);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.videos {
+  display: column;
+  width:calc(100vw - 200px);
+}
+
+.youtube-container {
+  background-color: #fff;
+  height: 100%;
+}

@@ -1,13 +1,3 @@
-.body-container {
-  display: flex;
-  justify-content: space-between;
-  float: left;
-  height: calc(100vh - 104px);
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-
 .liked-video-text {
   padding-bottom: 2rem;
   margin-left: 16px;
@@ -33,7 +23,6 @@
   justify-content: center;
   background-color: #f9f9f9;
 }
-
 
 .youtube-container {
   background-color: #fff;
