@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Header, SideBar } from '@components';
 import { useDispatch } from 'react-redux';
-import { getVideos } from '@redux'
+import { getVideos } from '@redux';
+import './styles.css'
 
 const YOUTUBE_API_KEY = `${process.env.REACT_APP_YOUTUBE_API_KEY}`
 
@@ -42,7 +43,7 @@ export function PageTemplate(Page) {
         />
         <div className="body-container">
           <SideBar />
-          <div className="videos">
+          <div className="page-content">
             <Page />
           </div>
         </div>

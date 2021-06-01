@@ -1,12 +1,41 @@
-.video-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 3rem 1rem;
-    padding: 3rem 1.5rem;
-    justify-content: center;
-    background-color: #f9f9f9;
+.body-container {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  height: calc(100vh - 104px);
+  width: 100vw;
+  overflow-x: hidden;
 }
+
 
 .liked-video-text {
   padding-bottom: 2rem;
+  margin-left: 16px;
+}
+
+.page-content {
+  width: 100vw;
+}
+
+.subscriptions {
+  margin: 16px
+}
+
+.subscription-list {
+  margin: 16px 0;
+  /* height: 100px */
+}
+
+.video-section {
+  display: grid;
+  gap: 3rem 1rem;
+  padding: 3rem 1.5rem;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+
+.youtube-container {
+  background-color: #fff;
+  height: 100%;
 }
