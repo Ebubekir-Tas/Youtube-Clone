@@ -2,28 +2,29 @@ import React from 'react';
 import YouTube from 'react-youtube';
 import { ToggleLike } from './ToggleLike';
 import { SubscribeToChannel } from './SubscribeToChannel';
-import './SearchResults.css';
+import { videoStyles } from '@styles';
 
 export function SelectedVideos({ videoUrl, videoAuthor, likedVideos }) {
+  const classes = videoStyles();
   return (
     <div>
       <YouTube
         videoId={videoUrl}
-        className="youtube-iframe"
+        className={classes.youtubeIframe}
       />
 
       {/* If the video is liked */}
       {likedVideos.includes(videoUrl) ?
         <ToggleLike
-          buttonStyle="unlike-button"
-          iconStyle="thumbUp-icon-liked"
+          buttonStyle="{classes.unlikeButton}"
+          iconStyle="{classes.thumbUpIconLiked}"
           likeToggleText="Unlike Video"
           videoUrl={videoUrl}
         />
         :
         <ToggleLike
-          buttonStyle="like-button"
-          iconStyle="thumbUp-icon-unliked"
+          buttonStyle="{classes.likeButton}"
+          iconStyle="{classes.thumbUpIconUnliked}"
           likeToggleText="like Video"
           videoUrl={videoUrl}
         />

@@ -1,7 +1,9 @@
 import React from "react";
-import "./Details.css";
+import { Typography } from '@material-ui/core';
+import { videoStyles } from '@styles';
 
 const Details = React.memo(() => {
+  const classes = videoStyles();
 
   let numOfViews = Math.floor(Math.random() * 300000)
     .toString()
@@ -28,14 +30,14 @@ const Details = React.memo(() => {
   }
 
   return (
-    <div className="video-details">
-      <a href="" className="video-title">
+    <div className={classes.videoDetails}>
+      <Typography className={classes.videoTitle}>
         Video Title
-      </a>
-      <a href="" className="video-channel-name">
+      </Typography>
+      <Typography className={classes.videoChannelName}>
         Channel Name
-      </a>
-      <div className="video-metadata">
+      </Typography>
+      <div className={classes.videoMetadata}>
         <span>{numOfViews + " views "}</span> • <span> {time()} ago</span>
       </div>
     </div>

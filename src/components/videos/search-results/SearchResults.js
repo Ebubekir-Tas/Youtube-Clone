@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import { SelectedVideos } from './SelectedVideos';
 import { VideoCards } from './VideoCards';
-import { pageStyles } from '@styles';
-import './SearchResults.css';
+import { videoStyles } from '@styles';
 
 export function SearchResults() {
 
@@ -12,16 +11,16 @@ export function SearchResults() {
   const [videoUrl, setVideoUrl] = useState(null);
   const [videoAuthor, setVideoAuthor] = useState({})
 
-  const classes = pageStyles();
+  const classes = videoStyles();
 
   return (
-    <section className="search-results">
+    <section className={classes.SearchResults}>
       {/* If there are no results from search and a search has been made, return "No results" */}
       {(searchedVideos.length === 0 && retrievedVideos ? (
         <p>No results</p>
       ) : retrievedVideos && (
 
-        <div className="results-wrapper">
+        <div>
           <div className={classes.videoSection}>
             {/* Video selected from search */}
             {videoUrl &&
@@ -30,7 +29,7 @@ export function SearchResults() {
                 videoAuthor={videoAuthor}
                 likedVideos={likedVideos} />
             }
-            <h2 className="video-section-title">Search Results</h2>
+            <h2 className={classes.videoSectionTitle}>Search Results</h2>
             {searchedVideos.map((item) => (
               <VideoCards
                 item={item}

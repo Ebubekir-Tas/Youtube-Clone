@@ -36,6 +36,10 @@ export const pageStyles = makeStyles((theme) => ({
     padding: '3rem 1.5rem',
     justifyContent: 'center',
     backgroundColor: '#fff',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))'
+    gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+    [theme.breakpoints.down('xs')]: {
+      gap: '0 1rem',
+      paddingLeft: 0
+    }
   }
 }));

@@ -1,11 +1,12 @@
 import React from "react";
-import "./Card.css";
 import { Details } from "./Details";
 import { Thumbnail } from "./Thumbnail";
+import { videoStyles } from '@styles';
 
 export function Card({ imageURL }) {
+  const classes = videoStyles();
   return (
-    <article className="video-container">
+    <article className={classes.videoContainer}>
       <Thumbnail imageURL={imageURL} />
       <Details />
     </article>
