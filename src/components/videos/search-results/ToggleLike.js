@@ -11,7 +11,12 @@ export function ToggleLike({ likeToggleText, iconStyle, buttonStyle, videoUrl })
   return (
     <Box
       className={buttonStyle}
-      onClick={() => dispatch(LikeVideo(videoUrl))}>
+      onClick={() => dispatch(LikeVideo(videoUrl))}
+      border={1}
+      borderLeft={1}
+      borderRight={1}
+      >
+        
       <IconButton >
         <ThumbUp className={iconStyle} />
       </IconButton>

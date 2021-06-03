@@ -1,15 +1,26 @@
 import React from 'react';
+import { Box, IconButton, Typography } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { SubscribeChannel } from '@redux';
+import { AddBox } from '@material-ui/icons';
 
-export function SubscribeToChannel({ videoAuthor }) {
+export function SubscribeToChannel({ buttonStyle, iconStyle,subscribeToggleText, videoAuthor }) {
   const dispatch = useDispatch();
   return (
-    <div 
+    <Box
+      className={buttonStyle}
       onClick={() => dispatch(SubscribeChannel(videoAuthor))}
       style={{ cursor: 'pointer' }}
+      border={1}
+      borderLeft={.25}
+      borderRight={.25}
     >
-      SUBSCRIBE to {videoAuthor.name}
-    </div>
+      <IconButton>
+        <AddBox className={iconStyle} />
+      </IconButton>
+      <Typography>
+        {subscribeToggleText}
+      </Typography>
+    </Box>
   )
 }

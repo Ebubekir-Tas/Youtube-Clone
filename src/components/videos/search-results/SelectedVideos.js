@@ -4,8 +4,14 @@ import { ToggleLike } from './ToggleLike';
 import { SubscribeToChannel } from './SubscribeToChannel';
 import { videoStyles } from '@styles';
 
-export function SelectedVideos({ videoUrl, videoAuthor, likedVideos }) {
+export function SelectedVideos({ channelSubscriptions, likedVideos, videoUrl, videoAuthor }) {
   const classes = videoStyles();
+  let isSubscribed
+  const checkIfSubscribed = () => {
+    channelSubscriptions.forEach(e => { if (e.name === videoAuthor.name) isSubscribed = true; })
+  }
+
+  checkIfSubscribed();
   return (
     <div>
       <YouTube
@@ -31,9 +37,21 @@ export function SelectedVideos({ videoUrl, videoAuthor, likedVideos }) {
       }
 
       {/* If channel is already subscribed to */}
-      <SubscribeToChannel 
-        videoAuthor={videoAuthor}
-      />
+      {isSubscribed ?
+        <SubscribeToChannel
+          videoAuthor={videoAuthor}
+          subscribeToggleText={'unsubscribe to ' + videoAuthor.name}
+          buttonStyle={classes.unsubscribeButton}
+          iconStyle={classes.unsubscribeIcon}
+        />
+        :
+        <SubscribeToChannel
+          videoAuthor={videoAuthor}
+          subscribeToggleText={'subscribe to ' + videoAuthor.name}
+          buttonStyle={classes.subscribeButton}
+          iconStyle={classes.subscribeIcon}
+        />
+      }
     </div>
   )
 }

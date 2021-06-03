@@ -3,11 +3,33 @@ import { theme } from './theme';
 
 export const videoStyles = makeStyles((theme) => ({
   likeButton: {
+    marginTop: theme.spacing(1),
     display: 'flex',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    borderRadius: 9999,
+    borderColor: 'lightgray'
   },
-
+  subscribeButton: {
+    marginTop: theme.spacing(1),
+    alignItems: 'center',
+    display: 'flex',
+    borderRadius: 9999,
+    borderColor: 'lightgray'
+  },
+  subscribeIcon: {
+    
+  },
+  unsubscribeButton: {
+    marginTop: theme.spacing(1),
+    alignItems: 'center',
+    color: 'red',
+    borderRadius: 9999,
+    display: 'flex'
+  },
+  unsubscribeIcon: {
+    color: 'red'
+  },
   thumbnail: {
     position: 'relative',
     display: 'flex',
@@ -38,10 +60,12 @@ export const videoStyles = makeStyles((theme) => ({
     color: 'blue'
   },
   unlikeButton: {
-    color: 'red',
+    marginTop: theme.spacing(1),
+    color: 'blue',
     display: 'flex',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    borderRadius: 9999
   },
   videoContainer: {
     display: 'flex',

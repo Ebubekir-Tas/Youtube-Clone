@@ -6,8 +6,12 @@ import { videoStyles } from '@styles';
 
 export function SearchResults() {
 
-  const { searchedVideos, retrievedVideos } = useSelector((state) => state.videos);
-  const { likedVideos } = useSelector((state) => state.videos);
+  const {
+    channelSubscriptions,
+    likedVideos,
+    searchedVideos,
+    retrievedVideos
+  } = useSelector((state) => state.videos);
   const [videoUrl, setVideoUrl] = useState(null);
   const [videoAuthor, setVideoAuthor] = useState({})
 
@@ -27,7 +31,9 @@ export function SearchResults() {
               <SelectedVideos
                 videoUrl={videoUrl}
                 videoAuthor={videoAuthor}
-                likedVideos={likedVideos} />
+                likedVideos={likedVideos}
+                channelSubscriptions={channelSubscriptions}
+              />
             }
             <h2 className={classes.videoSectionTitle}>Search Results</h2>
             {searchedVideos.map((item) => (
