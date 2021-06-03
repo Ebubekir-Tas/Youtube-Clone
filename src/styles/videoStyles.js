@@ -8,27 +8,16 @@ export const videoStyles = makeStyles((theme) => ({
     alignItems: 'center',
     cursor: 'pointer',
     borderRadius: 9999,
-    borderColor: 'lightgray'
+    borderColor: 'lightgray',
+    width: 250
   },
   subscribeButton: {
     marginTop: theme.spacing(1),
     alignItems: 'center',
     display: 'flex',
     borderRadius: 9999,
-    borderColor: 'lightgray'
-  },
-  subscribeIcon: {
-    
-  },
-  unsubscribeButton: {
-    marginTop: theme.spacing(1),
-    alignItems: 'center',
-    color: 'red',
-    borderRadius: 9999,
-    display: 'flex'
-  },
-  unsubscribeIcon: {
-    color: 'red'
+    borderColor: 'lightgray',
+    width: 250
   },
   thumbnail: {
     position: 'relative',
@@ -65,7 +54,19 @@ export const videoStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     cursor: 'pointer',
-    borderRadius: 9999
+    borderRadius: 9999,
+    width: 250
+  },
+  unsubscribeButton: {
+    marginTop: theme.spacing(1),
+    alignItems: 'center',
+    color: 'red',
+    borderRadius: 9999,
+    display: 'flex',
+    width: 250
+  },
+  unsubscribeIcon: {
+    color: 'red'
   },
   videoContainer: {
     display: 'flex',
