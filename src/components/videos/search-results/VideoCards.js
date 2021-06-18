@@ -3,18 +3,19 @@ import { videoStyles } from '@styles';
 
 export function VideoCards({ item, setVideoUrl, setVideoAuthor }) {
   const classes = videoStyles();
+  console.log(item.thumbnails[0])
   return (
     <article className={classes.videoContainer} key={item.id}>
       <a
         onClick={() => {setVideoUrl(item.id); setVideoAuthor(item.author)}}
         rel="noopener noreferrer"
-        className={classes.thumbnail}
+        className={classes.bestThumbnail}
         style={{ cursor: 'pointer' }}
         data-duration={item.duration}
       >
         <img
           className={classes.thumbnailImage}
-          src={item.thumbnail}
+          src={item.thumbnails[0].url}
           alt={"Video Thumbnail"}
         />
       </a>
