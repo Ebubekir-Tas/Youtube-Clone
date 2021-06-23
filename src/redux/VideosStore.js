@@ -36,7 +36,6 @@ export const VideosStore = createSlice({
       const isSubscribed = (e) => e.name === action.payload.name
       // If not subscribed
       if (!state.channelSubscriptions.some(isSubscribed)){
-        console.log('fff')
         return {
           ...state,
           channelSubscriptions: [...state.channelSubscriptions, action.payload]
@@ -47,7 +46,6 @@ export const VideosStore = createSlice({
       // Unsubscribe if already subscribed
       // If subscribed
       if (state.channelSubscriptions.some(isSubscribed)){
-        console.log(state.channelSubscriptions)
       return {
         ...state,
         channelSubscriptions: state.channelSubscriptions.filter(channel => channel.name !== action.payload.name)
