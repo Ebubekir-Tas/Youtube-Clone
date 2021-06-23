@@ -31,7 +31,7 @@ export function SelectedVideos({ channelSubscriptions, likedVideos, videoUrl, vi
         <ToggleLike
           buttonStyle={classes.likeButton}
           iconStyle={classes.thumbUpIconUnliked}
-          likeToggleText="like Video"
+          likeToggleText="Like Video"
           videoUrl={videoUrl}
         />
       }
@@ -40,14 +40,14 @@ export function SelectedVideos({ channelSubscriptions, likedVideos, videoUrl, vi
       {isSubscribed ?
         <SubscribeToChannel
           videoAuthor={videoAuthor}
-          subscribeToggleText={'unsubscribe to ' + videoAuthor.name}
+          subscribeToggleText={'Unsubscribe to ' + videoAuthor.name}
           buttonStyle={classes.unsubscribeButton}
           iconStyle={classes.unsubscribeIcon}
         />
         :
         <SubscribeToChannel
           videoAuthor={videoAuthor}
-          subscribeToggleText={'subscribe to ' + videoAuthor.name}
+          subscribeToggleText={'Subscribe to ' + videoAuthor.name}
           buttonStyle={classes.subscribeButton}
           iconStyle={classes.subscribeIcon}
         />
