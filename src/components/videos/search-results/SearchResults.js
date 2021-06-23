@@ -36,9 +36,10 @@ export function SearchResults() {
               />
             }
             <h2 className={classes.videoSectionTitle}>Search Results</h2>
-            {searchedVideos.map((item) => (
+            {searchedVideos.map((item, i) => (
               <VideoCards
                 item={item}
+                key={item + i}
                 setVideoUrl={setVideoUrl}
                 setVideoAuthor={setVideoAuthor}
               />
