@@ -73,11 +73,13 @@ export const videoStyles = makeStyles((theme) => ({
     flexDirection: 'column'
   },
   videoTitle: {
+    '&&': {
     fontSize: '1rem',
     fontWeight: '600',
     marginBottom: '0.5rem',
     textDecoration: 'none',
     color: '#000'
+    }
   },
   videoDetails: {
     display: 'flex',
