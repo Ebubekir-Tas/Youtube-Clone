@@ -3,7 +3,6 @@ import { videoStyles } from '@styles';
 
 export function VideoCards({ item, setVideoUrl, setVideoAuthor }) {
   const classes = videoStyles();
-  console.log(item.thumbnails[0])
   return (
     <article className={classes.videoContainer} key={item.id}>
       <a

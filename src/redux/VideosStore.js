@@ -19,31 +19,41 @@ export const VideosStore = createSlice({
     }),
     LikeVideo: (state, action) => {
       // Disallows duplicate liked videos
-      if (!state.likedVideos.includes(action.payload)) return {
-        ...state,
-        likedVideos: [...state.likedVideos, action.payload]
-      }
+      if (!state.likedVideos.includes(action.payload)) 
+        return {
+          ...state,
+          likedVideos: [...state.likedVideos, action.payload]
+        }
 
       // "Unlike" video
       return {
         ...state,
-        likedVideos: state.likedVideos.filter(video => video !== action.payload),
+        likedVideos: state.likedVideos.filter(video => video !== action.payload)
       }
     },
     SubscribeChannel: (state, action) => {
-
       // Subscribe if not subscribed
       const isSubscribed = (e) => e.name === action.payload.name
-      if (!state.channelSubscriptions.some(isSubscribed))
+      // If not subscribed
+      if (!state.channelSubscriptions.some(isSubscribed)){
+        console.log('fff')
         return {
           ...state,
           channelSubscriptions: [...state.channelSubscriptions, action.payload]
         }
-
-      // If already subscribed, don't add subscription
-      return {
-        ...state
+       
       }
+
+      // Unsubscribe if already subscribed
+      // If subscribed
+      if (state.channelSubscriptions.some(isSubscribed)){
+        console.log(state.channelSubscriptions)
+      return {
+        ...state,
+        channelSubscriptions: state.channelSubscriptions.filter(channel => channel.name !== action.payload.name)
+      }
+    }
+
     }
   }
 });
