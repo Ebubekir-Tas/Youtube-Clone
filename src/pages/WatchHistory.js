@@ -6,6 +6,9 @@ export function WatchHistory() {
   return (
     <div className={classes.pageInnerContent}>
       Watch History:
+      <br />
+      <br />
+      <img src="/images/construction.png" alt="Coming Soon!" />
     </div>
   )
 }

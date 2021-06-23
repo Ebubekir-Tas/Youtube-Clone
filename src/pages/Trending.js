@@ -6,6 +6,9 @@ export function Trending() {
   return (
     <div className={classes.pageInnerContent}>
       Trending Videos:
+      <br />
+      <br />
+      <img src="/images/construction.png" alt="Coming Soon!" />
     </div>
   )
 }

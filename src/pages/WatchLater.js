@@ -6,6 +6,9 @@ export function WatchLater() {
   return (
     <div className={classes.pageInnerContent}>
       Watch Later:
+      <br />
+      <br />
+      <img src="/images/construction.png" alt="Coming Soon!" />
     </div>
   )
 }
