@@ -14,11 +14,18 @@ export function Subscriptions() {
   const classes = pageStyles();
   return (
     <div className={classes.pageInnerContent}>
-      <Typography>
-        Subscribed To:
-      </Typography>
 
-      {name.map((val, i) => 
+      {/* If no subscriptions */}
+      {name.length === 0 ?
+        <Typography>
+          Search for a video in the Home page to subscribe to a channel.
+        </Typography>
+        :
+        <Typography>
+          Subscribed To:
+        </Typography>
+      }
+      {name.map((val, i) =>
         <Paper className={classes.subscriptionList}>
           <div>{name[i]}</div>
           <div>{ref[i]}</div>
@@ -26,6 +33,7 @@ export function Subscriptions() {
           <img src={avatar[i].url} />
         </Paper>
       )}
+
     </div>
   )
 }
