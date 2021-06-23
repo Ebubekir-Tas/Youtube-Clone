@@ -74,7 +74,7 @@ export const videoStyles = makeStyles((theme) => ({
   },
   videoTitle: {
     fontSize: '1rem',
-    fontWeight: 'bold',
+    fontWeight: '600',
     marginBottom: '0.5rem',
     textDecoration: 'none',
     color: '#000'
