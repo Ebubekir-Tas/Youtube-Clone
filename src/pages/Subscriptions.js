@@ -18,13 +18,14 @@ export function Subscriptions() {
       {/* If no subscriptions */}
       {name.length === 0 ?
         <Typography>
-          Search for a video in the Home page to subscribe to a channel.
+          Search for a video in the Home page to Subscribe to a channel.
         </Typography>
         :
         <Typography>
           Subscribed To:
         </Typography>
       }
+      
       {name.map((val, i) =>
         <Paper className={classes.subscriptionList}>
           <div>{name[i]}</div>
