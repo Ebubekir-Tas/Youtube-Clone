@@ -1,5 +1,5 @@
 # Youtube-Clone
-This is a responsive Youtube Clone made with React.
+This is a responsive Youtube Clone made with React, Redux, Material UI, React Router, Youtube API.
 
 https://tasyoutubeclone.netlify.app/
 
