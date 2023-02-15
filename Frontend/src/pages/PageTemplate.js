@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { getVideos } from '@redux';
 import { pageStyles } from '@styles';
 
-const YOUTUBE_API_KEY = `${process.env.REACT_APP_YOUTUBE_API_KEY}`
+const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
 
 export function PageTemplate(Page) {
   return function NewPage() {
