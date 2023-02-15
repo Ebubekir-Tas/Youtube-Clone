@@ -3,3 +3,7 @@
   to = "/index.html"
   status = 200
   force = false
+
+[build]
+  command = "npm run build"
+  publish = "Frontend/build"
