@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[build]
+  base = "Frontend"
+  command = "npm run build"
+  publish = "Frontend"
