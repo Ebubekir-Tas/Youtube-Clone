@@ -3,12 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 export const VideosStore = createSlice({
   name: 'videos',
   initialState: {
-    // Search results
     searchedVideos: [],
     retrievedVideos: false,
-    // Liked Videos
     likedVideos: [],
-    // Channels subscribed to
     channelSubscriptions: []
   },
   reducers: {
@@ -32,9 +29,7 @@ export const VideosStore = createSlice({
       }
     },
     SubscribeChannel: (state, action) => {
-      // Subscribe if not subscribed
       const isSubscribed = (e) => e.name === action.payload.name
-      // If not subscribed
       if (!state.channelSubscriptions.some(isSubscribed)){
         return {
           ...state,
@@ -43,7 +38,6 @@ export const VideosStore = createSlice({
        
       }
 
-      // Unsubscribe if already subscribed
       // If subscribed
       if (state.channelSubscriptions.some(isSubscribed)){
       return {

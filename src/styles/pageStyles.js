@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core';
+import { sideBarWidth, sideBarWidthXs } from '@constants';
 
 export const pageStyles = makeStyles((theme) => ({
   youtubeContainer: {
@@ -28,7 +29,10 @@ export const pageStyles = makeStyles((theme) => ({
   },
   videos: {
     display: 'column',
-    width: '100vw'
+    width: `calc(100% - ${sideBarWidth})`,
+    [theme.breakpoints.down('xs')]: {
+      width: `calc(100% - ${sideBarWidthXs})`,
+    }
   },
   videoSection: {
     display: 'grid',
