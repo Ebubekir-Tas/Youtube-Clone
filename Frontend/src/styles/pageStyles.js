@@ -45,5 +45,23 @@ export const pageStyles = makeStyles((theme) => ({
       gap: '0 1rem',
       paddingLeft: 0
     }
+  },
+  registerButton: {
+    marginTop: '1rem',
+  },
+  registerPageContainer: {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    textAlign: 'center',
+    border: '1px solid gray',
+    borderRadius: '1rem',
+    width: 400
+  }, 
+  signInText: {
+    display: 'flex',
+    justifyContent: 'right',
+    marginRight: '1rem'
   }
 }));

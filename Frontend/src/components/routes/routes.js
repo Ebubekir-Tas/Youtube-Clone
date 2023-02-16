@@ -5,8 +5,9 @@ import {
   Subscriptions,
   WatchHistory,
   WatchLater,
-  LikedVideos
+  LikedVideos,
 } from '@pages';
+import Register from '../../pages/auth/Register';
 
 export const routes = [
   {
@@ -14,6 +15,12 @@ export const routes = [
     path: '/',
     exact: true,
     component: PageTemplate(HomePage)
+  },
+  {
+    key: 'register',
+    path: '/register',
+    exact: true,
+    component:Register
   },
   {
     key: 'home-page',
